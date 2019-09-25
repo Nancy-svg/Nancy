@@ -13,9 +13,9 @@ int main()
 	cout << "Enter C" << endl;
 	cin >> c;
 	k = a;
-	a = b;
-	b = c;
-	c = k;
+	a = c;
+	b = k;
+	c = b;
 	cout << "A = " << a << endl;
 	cout << "B = " << b << endl;
 	cout << "C = " << c << endl;
