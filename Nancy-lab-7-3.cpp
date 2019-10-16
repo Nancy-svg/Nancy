@@ -4,15 +4,14 @@ using namespace std;
 
 int main()
 {
+	setlocale(LC_ALL, "Russian");
 	
-
-
-	{
-		cout << "Double inequality is true" << endl;
-	}
-	else {
-		cout << "double inequality is wrong" << endl;
-	}
+	int a, b;
+	cout << "Ведите число" << endl;
+	cin >> a;
+	b = a % 2;
+	if (a > 9 && a < 100 && b == 0) cout << "Число явдяется двузначныи и четным" << endl;
+	else cout << "Число не является двузначным , либо чентным , либо четным и двузначным" << endl;
 
 	return 0;
 }
