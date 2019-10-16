@@ -8,7 +8,8 @@ int main()
 	double a, result;
 	cout << "Enter A (0 < A < 360)" << endl;
 	cin >> a;
-	result = pi * a / 180;
+	result = 180 / pi;
+	result = a / result;
 	cout << "radian=" << result << endl;
 
 	return 0;
