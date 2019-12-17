@@ -1,16 +1,13 @@
-﻿#include <iostream> 
+﻿#include <iostream>   
 #include <cmath>
-
 using namespace std;
-int main()
+int Fact2(int n)
 {
-	int x, i, n, k;
-	cout << "Enter N (N > 0)" << endl;
-	cin >> n;
+	int k, x, i;
 	x = 1;
 	k = n % 2;
 	if (k != 0) {
-		for (i = 1;i < n+1;i = i + 2) {
+		for (i = 1;i < n + 1;i = i + 2) {
 			x = x * i;
 		}
 	}
@@ -19,7 +16,13 @@ int main()
 			x = x * i;
 		}
 	}
-
-	cout << x;
+	return x;
+}
+int main()
+{
+	int n;
+	cout << "Enter N (N > 0)" << endl;
+	cin >> n;
+	cout << "Result is " << Fact2(n) << endl;
 	return 0;
 }
