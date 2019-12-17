@@ -1,27 +1,27 @@
-﻿#include <iostream>   
+#include <iostream>   
 #include <cmath>
 using namespace std;
-
-int main()
+int sign(int x)
 {
-	int  i, x;
-	int a[1];
-	cout << "Sign(A) + Sign(B)" << endl;
-	cout << "Enter A ";
-	cin >> a[0];
-	cout << "Enter B ";
-	cin >> a[1];
-	x = 0;
-	for (i = 0;i < 2;i++) {
-		if (a[i] > 0) a[i] = 1;
+	int b;
+	if (x > 0) b = 1;
+	else {
+		if (x == 0) b = 0;
 		else {
-			if (a[i] == 0) a[i] = 0;
-			else {
-				if (a[i] < 0) a[i] = -1;
-			}
+			if (x < 0) b = -1;
 		}
 	}
-	x = a[0] + a[1];
-	cout << x << endl;
+	return b;
+}
+int main()
+{
+	int x1, x2, result;
+	cout << "Sign(A) + Sign(B)" << endl;
+	cout << "Enter A ";
+	cin >> x1;
+	cout << "Enter B ";
+	cin >> x2;
+	result = sign(x1) + sign(x2);
+	cout << "Result is " << result << endl;
 	return 0;
 }
