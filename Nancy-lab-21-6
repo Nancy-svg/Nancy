@@ -1,0 +1,21 @@
+#include <clocale>
+#include <string>
+using namespace std;
+int main()
+{
+   int k = 0;
+    setlocale(LC_ALL,"RUS");
+    string text;
+    cout << "Enter text" << endl;
+	getline(cin, text);
+	for(int i = text.size();i > 0 ;i--){
+	if (text.at(i) == '\\' ){
+            k++;
+            if (text.at(i) == '\\' && k++){
+	    for(int j = i;j > text.size() ;j++)
+	    cout << text.at(j);
+	    i = 0;
+        } 
+	}
+	}
+}
