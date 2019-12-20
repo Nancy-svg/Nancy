@@ -1,0 +1,20 @@
+# include <iostream>
+#include <string>
+#include <Windows.h>
+#include <clocale>
+using namespace std;
+int main()
+{
+	string text;
+	int k;
+	k = 0;
+	setlocale(LC_ALL, "rus");
+	text = " Добрый день";
+	for (int i = 0; i < text.size(); i++)
+	{
+		if ((text[i] == 'а') || (text[i] == 'у') || (text[i] == 'е') || (text[i] == 'ы') || (text[i] == 'о') || (text[i] == 'э') || (text[i] == 'я') || (text[i] == 'и') || (text[i] == 'ю'))
+			k ++;
+	}
+	cout << "Result is: " << k;
+	return 0;
+}
