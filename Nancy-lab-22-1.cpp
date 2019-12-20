@@ -1,39 +1,34 @@
 ﻿#include <iostream>
+#include <windows.h>
 #include <string>
 #include <fstream>
-#include <clocale>
 using namespace std;
 int main()
 {
 	setlocale(LC_ALL, "Russian");
-	string path = "C:\\Users\\User\\Desktop\\22 лабараторная\\1 лаб.txt";
-	fstream abc;
-	abc.open(path);
-	char s[10000];
-	int k = 0;
-	if (!abc.is_open())
+	SetConsoleCP(1251);
+	SetConsoleOutputCP(1251);
+	fstream file;
+	char c(32);
+	string s;
+	int i, n, j, k;
+	int m = 0;
+	file.open("C:\\Users\\User\\Desktop\\22 лабараторная\\1 лаб.txt");
+	if (file)
 	{
-		cout << "Ошибка открытия файла!" << endl;
-	}
-	else
-	{
-		while (!abc.eof())
-		{
-			abc >> s;
-			for (int i = 0; s[i] != 0; i++)
-			{
-				if (s[i] == ' ')
-				{
-					k = i;
-					break;
-				}
-			}
+		while (!file.eof())
+	    {
+			getline(file, s, '\0');
+			n = s.length();
+			k = s.find(c);
+			for (i = k + 1; i <= n; i++)
+				file << s[i];
 		}
-		for (int i = k + 1; s[i] != 0; i++)
-		{
-			abc << s[i];
-		}
+		file.close();
+		file.open("C:\\Users\\User\\Desktop\\22 лабараторная\\1 лаб.txt", ios::out);
+		for (i = k + 1; i <= n; i++)
+			file << s[i];
+		file.close();
 	}
-	abc.close();
 	return 0;
 }
