@@ -22,8 +22,6 @@ int main()
 			for (j = i; j < n; j++)
 				s[j] = s[j + 1];
 		file << s;
-		file.close();
-		file.open("C:\\Users\\User\\Desktop\\22 лабараторная\\4 лаб.txt");
 		for (i = 0; i < n; i++)
 			if (s[i] == s[i + 1] && s[i] == c)
 				for (j = i; j < n; j++)
