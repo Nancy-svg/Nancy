@@ -1,0 +1,18 @@
+#include <iostream>   
+using namespace std;
+int main()
+{
+    int k = 0;
+	string text, text1;
+	cout << "Enter text s" << endl;
+	getline(cin, text);
+	cout << "Enter text s0" << endl;
+	getline(cin, text1);
+for(int i = 0;i <text.size();i++){
+    if(text.substr(i, text1.size()) == text1){
+        k++;
+        i = i + text1.size() - 1;
+    }
+}
+cout << "Result is " << k;
+}
