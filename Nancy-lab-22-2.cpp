@@ -10,12 +10,7 @@ int main()
 	string path = "C:\\Users\\User\\Desktop\\22 лабараторная\\2 лаб.txt";
 	ofstream abc;
 	abc.open(path);
-	if (!abc.is_open())
-	{
-		cout << "Ошибка открытия файла!" << endl;
-	}
-	else
-	{
+	
 		cout << "Введите количество строк: ";
 		cin >> n;
 		cout << "Введите количество * : ";
@@ -28,7 +23,7 @@ int main()
 			}
 			abc << endl;
 		}
-	}
+	
 	abc.close();
 	return 0;
 }
