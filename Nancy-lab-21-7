@@ -1,0 +1,19 @@
+#include <clocale>
+#include <string>
+using namespace std;
+int main()
+{
+   int k = 0;
+    setlocale(LC_ALL,"RUS");
+    string text;
+    cout << "Enter text" << endl;
+	getline(cin, text);
+        n = text.size();
+	for (i = 0; i <= n; i++){
+		if (i % 2 == 1)
+			cout << text.at(i);}
+	for (j = n; j >= 0; j--)
+		{if (j % 2 == 0)
+			cout << text.at(i);}
+	return 0;
+}
