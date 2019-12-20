@@ -10,13 +10,13 @@ int main()
 	string path = "C:\\Users\\User\\Desktop\\22 лабараторная\\5 лаб.txt";
 	ifstream abc;
 	abc.open(path);
-	string s;
+	string text;
 	{
 
 		while (!abc.eof())
 		{
-			getline(abc, s);
-			if (s.substr(0, 5) == "     ")
+			getline(abc, text);
+			if (text.substr(0, 5) == "     ")
 			{
 				k++;
 			}
