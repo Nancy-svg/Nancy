@@ -1,32 +1,33 @@
-﻿#include <iostream>
-#include <windows.h>
+#include <iostream>
 #include <string>
 #include <fstream>
+#include <clocale>
 using namespace std;
 int main()
 {
 	setlocale(LC_ALL, "Russian");
-	SetConsoleCP(1251);
-	SetConsoleOutputCP(1251);
-	fstream file;
-	char c(32);
-	string s;
-	int i, n, j, k;
-	int m = 0;
-	file.open("C:\\Users\\User\\Desktop\\22 лабараторная\\1 лаб.txt");
-	if (file)
-	{
-		while (!file.eof())
-	    {
-			getline(file, s, '\0');
-			n = s.length();
-			k = s.find(c);
-			for (i = k + 1; i <= n; i++)
-				file << s[i];
+	string path = "C:\\Users\\User\\Desktop\\22 лабараторная\\2 лаб.txt";
+	fstream abc;
+	abc.open(path);
+	char text[10000];
+	int k = 0;
+	
+		while (!abc.eof())
+		{
+			abc >> text;
+			for (int i = 0; [text] != 0; i++)
+			{
+				if (text[i] == ' ')
+				{
+					k = i;
+				}
+			}
 		}
-		for (i = k + 1; i <= n; i++)
-			file << s[i];
-		file.close();
+		for (int i = k + 1; text[i] != 0; i++)
+		{
+			abc << text[i];
+		}
 	}
+	abc.close();
 	return 0;
 }
