@@ -10,17 +10,10 @@ int main()
 	fstream abc;
 	abc.open(path);
 	string s;
-	if (!abc.is_open())
-	{
-		cout << "Ошибка открытия файла!" << endl;
-	}
-	else
-	{
 		while (abc >> s)
 		{
 			cout << ' ' << s;
 		}
-	}
 	abc.close();
 	return 0;
 }
