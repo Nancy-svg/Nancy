@@ -1,0 +1,17 @@
+#include <iostream>   
+#include <clocale>
+using namespace std;
+int main()
+{
+    int k = 0;
+    setlocale(LC_ALL,"RUS");
+    string text;
+    cout << "Enter text" << endl;
+	getline(cin, text);
+	if ( text.at(0) != ' ') k++;
+	for(int i = 1;i < text.size();i++){
+	if (text.at(i) != ' ' && text.at(i-1) == ' ')
+	k ++;
+	}
+	cout << "Resulr is " << k << endl;
+}
