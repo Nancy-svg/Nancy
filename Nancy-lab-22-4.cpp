@@ -9,10 +9,10 @@ int main()
 	string path = "C:\\Users\\User\\Desktop\\22 лабараторная\\4 лаб.txt";
 	fstream abc;
 	abc.open(path);
-	string s;
-		while (abc >> s)
+	string text;
+		while (abc >> text)
 		{
-			cout << ' ' << s;
+			cout << ' ' << text;
 		}
 	abc.close();
 	return 0;
