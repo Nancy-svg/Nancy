@@ -24,8 +24,6 @@ int main()
 			for (i = k + 1; i <= n; i++)
 				file << s[i];
 		}
-		file.close();
-		file.open("C:\\Users\\User\\Desktop\\22 лабараторная\\1 лаб.txt", ios::out);
 		for (i = k + 1; i <= n; i++)
 			file << s[i];
 		file.close();
